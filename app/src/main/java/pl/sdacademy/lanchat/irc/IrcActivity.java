@@ -16,6 +16,8 @@ public class IrcActivity extends AppCompatActivity {
 
     TextView textViewIRC;
 
+    IrcAsyncTask ircAsyncTask;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +31,14 @@ public class IrcActivity extends AppCompatActivity {
 
         textViewIRC = (TextView) findViewById(R.id.textViewIRC);
 
-        textViewIRC.setText(nick+server+socket+chanel);
+        ircAsyncTask = new IrcAsyncTask(textViewIRC);
+        ircAsyncTask.execute(nick);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        ircAsyncTask.onCancelled();
     }
 }
