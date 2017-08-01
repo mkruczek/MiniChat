@@ -43,8 +43,9 @@ public class ChatActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String msg = editTextMsg.getText().toString();
                 LanClientAsyncTask lanClientAsyncTask = new LanClientAsyncTask(ChatActivity.this);
-                lanClientAsyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, msg);
+                lanClientAsyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, msg, nick);
                 Log.d("kru", "jestem w onClick");
+                editTextMsg.setText("");
 
             }
         });

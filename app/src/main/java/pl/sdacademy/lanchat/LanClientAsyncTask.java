@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.util.Scanner;
 
 /**
@@ -31,6 +32,7 @@ public class LanClientAsyncTask extends AsyncTask<String, Void, Void> {
     protected Void doInBackground(String... params) {
 
         String msg = params[0];
+        String nick = params[1];
 
         Log.d("kru", "jestem w doInBackground");
 
@@ -39,8 +41,11 @@ public class LanClientAsyncTask extends AsyncTask<String, Void, Void> {
             byte[] buf = new byte[1024];
             DatagramPacket packet = new DatagramPacket(buf, buf.length, InetAddress.getByName("10.0.0.255"), 4446);
 
-                packet.setData((msg).getBytes());
-                socket.send(packet);
+            String sendMsg = "[" + nick + "] " + msg;
+            packet.setData((sendMsg).getBytes());
+            socket.send(packet);
+
+            socket.close();
 
         } catch (IOException e) {
             e.printStackTrace();
