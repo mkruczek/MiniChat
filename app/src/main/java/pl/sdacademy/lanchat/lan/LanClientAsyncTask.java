@@ -1,4 +1,4 @@
-package pl.sdacademy.lanchat;
+package pl.sdacademy.lanchat.lan;
 
 import android.app.ProgressDialog;
 import android.content.Context;

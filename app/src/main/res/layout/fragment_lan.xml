@@ -1,0 +1,40 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.LanFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/nickEditTexLAN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="set NICK"
+            android:layout_marginBottom="35dp"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/IPaddressEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="set IPaddress (192.134.62.255)"
+            android:layout_marginBottom="35dp"
+            android:inputType="textPersonName" />
+
+        <ImageButton
+            android:id="@+id/loginButtonLAN"
+            android:src="@android:drawable/ic_menu_send"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_go" />
+
+    </LinearLayout>
+
+</FrameLayout>

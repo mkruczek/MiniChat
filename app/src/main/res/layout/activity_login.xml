@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="25dp"
+    tools:context="pl.sdacademy.lanchat.LoginActivity">
+
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/IRCButton"
+            android:onClick="IRConClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:text="IRC" />
+
+        <RadioButton
+            android:id="@+id/LANButton"
+            android:onClick="LANonClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:text="LAN" />
+
+    </RadioGroup>
+
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:id="@+id/containerForFragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+
+</LinearLayout>
+    <!--<EditText-->
+        <!--android:id="@+id/editTextAddress"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="ex. 10.0.0.255"/>-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/editTextNick"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="set your nick"/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/buttonLogin"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="chat" />-->
+
+

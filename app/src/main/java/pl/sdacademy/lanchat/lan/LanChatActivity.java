@@ -1,4 +1,4 @@
-package pl.sdacademy.lanchat;
+package pl.sdacademy.lanchat.lan;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -10,7 +10,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class ChatActivity extends AppCompatActivity {
+import pl.sdacademy.lanchat.R;
+
+public class LanChatActivity extends AppCompatActivity {
 
     private String address;
     private String nick;
@@ -25,8 +27,8 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
 
         Intent i = getIntent();
-        address = i.getStringExtra("ipAddress");
-        nick = i.getStringExtra("nick");
+        address = i.getStringExtra(getString(R.string.ip_address_lan));
+        nick = i.getStringExtra(getString(R.string.nick_lan));
 
         textViewChat = (TextView) findViewById(R.id.textViewChat);
         editTextMsg = (EditText) findViewById(R.id.editTextMsg);
@@ -42,7 +44,7 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String msg = editTextMsg.getText().toString();
-                LanClientAsyncTask lanClientAsyncTask = new LanClientAsyncTask(ChatActivity.this);
+                LanClientAsyncTask lanClientAsyncTask = new LanClientAsyncTask(LanChatActivity.this);
                 lanClientAsyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, msg, nick);
                 Log.d("kru", "jestem w onClick");
                 editTextMsg.setText("");

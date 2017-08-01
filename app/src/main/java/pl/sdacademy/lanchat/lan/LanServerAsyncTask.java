@@ -1,4 +1,4 @@
-package pl.sdacademy.lanchat;
+package pl.sdacademy.lanchat.lan;
 
 import android.os.AsyncTask;
 import android.widget.TextView;

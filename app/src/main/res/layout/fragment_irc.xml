@@ -1,0 +1,56 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pl.sdacademy.lanchat.layout.IrcFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/nickEditTexIRC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="set NICK"
+            android:layout_marginBottom="35dp"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/serverEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="set server"
+            android:layout_marginBottom="35dp"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/chanelEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ex. #ircpol"
+            android:layout_marginBottom="35dp"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/socketEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ex. 6667"
+            android:layout_marginBottom="35dp"
+            android:inputType="textPersonName" />
+
+        <ImageButton
+            android:id="@+id/loginButtonIRC"
+            android:src="@android:drawable/ic_menu_send"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_go" />
+
+    </LinearLayout>
+
+</FrameLayout>
