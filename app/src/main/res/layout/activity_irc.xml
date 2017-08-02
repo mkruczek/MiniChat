@@ -6,10 +6,18 @@
     android:layout_height="match_parent"
     tools:context="pl.sdacademy.lanchat.irc.IrcActivity">
 
-    <TextView
-        android:id="@+id/textViewIRC"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:text="TextView" />
+        android:layout_weight="1">
+
+
+        <TextView
+            android:id="@+id/textViewIRC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+    </ScrollView>
+
 </LinearLayout>

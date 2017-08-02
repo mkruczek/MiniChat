@@ -24,6 +24,8 @@ public class IrcAsyncTask extends AsyncTask<String, String, Void> {
     private String socketValue;
     private String chanel;
 
+    private static String strToTextViev;
+
     Socket socket;
 
     public IrcAsyncTask(TextView textView) {
@@ -54,7 +56,7 @@ public class IrcAsyncTask extends AsyncTask<String, String, Void> {
                 String channel = "#ebooks";
 
                 // Connect directly to the IRC server.
-                socket = new Socket(server, 6660);
+                socket = new Socket(server, 6662);
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
                 BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
@@ -71,7 +73,6 @@ public class IrcAsyncTask extends AsyncTask<String, String, Void> {
                         break;
                     } else if (line.indexOf("433") >= 0) {
                         publishProgress("Nickname is already in use.");
-
 
                     }
                 }
@@ -90,7 +91,10 @@ public class IrcAsyncTask extends AsyncTask<String, String, Void> {
 
                     } else {
                         // Print the raw line received by the bot.
-                        publishProgress(line);
+
+                        strToTextViev += line;
+
+                        publishProgress(privmsg(strToTextViev));
                     }
                 }
             } catch (IOException e) {
@@ -108,5 +112,12 @@ public class IrcAsyncTask extends AsyncTask<String, String, Void> {
         textView.setText(values[0]);
     }
 
+    public String privmsg(String line){
+        if(line.toLowerCase().contains("privmsg")){
+            line += "KLOPKLOPKLOPKLOPKLOP";
+        }
+
+        return line;
+    }
 
 }
