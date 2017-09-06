@@ -49,7 +49,8 @@ public class IrcAsyncTask extends AsyncTask<String, String, Void> {
             try {
                 // The server to connect to and our details.
                 server = "irc.irchighway.net";
-                nick = params[0];
+                //nick = params[0];
+                nick = "pierwszyZbrzegu";
                 String login = "janusz_z_miko";
 
                 // The channel which the bot will join.
@@ -114,7 +115,6 @@ public class IrcAsyncTask extends AsyncTask<String, String, Void> {
 
     public String privmsg(String line){
         if(line.toLowerCase().contains("privmsg")){
-            line += "KLOPKLOPKLOPKLOPKLOP";
         }
 
         return line;

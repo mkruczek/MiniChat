@@ -29,14 +29,16 @@ public class LanFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final SharedPreferences sp = getActivity().getSharedPreferences(getString(R.string.my_file), Context.MODE_PRIVATE);
-        String name = sp.getString(getString(R.string.nick_lan), "");
+        String name_last = sp.getString(getString(R.string.nick_lan), "");
+        String ip_last = sp.getString(getString(R.string.ip_address_lan), "");
 
         View myView = inflater.inflate(R.layout.fragment_lan, container, false);
 
         final EditText nickEditTexLAN = (EditText) myView.findViewById(R.id.nickEditTexLAN);
-        nickEditTexLAN.setText(name);
+        nickEditTexLAN.setText(name_last);
 
         final EditText IPaddressEditText = (EditText) myView.findViewById(R.id.IPaddressEditText);
+        IPaddressEditText.setText(ip_last);
 
         ImageButton loginButtonLAN = (ImageButton) myView.findViewById(R.id.loginButtonLAN);
         loginButtonLAN.setOnClickListener(new View.OnClickListener() {

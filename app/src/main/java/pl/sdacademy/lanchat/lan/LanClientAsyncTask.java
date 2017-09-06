@@ -33,13 +33,14 @@ public class LanClientAsyncTask extends AsyncTask<String, Void, Void> {
 
         String msg = params[0];
         String nick = params[1];
+        String addressURL = params[2];
 
         Log.d("kru", "jestem w doInBackground");
 
         try {
             DatagramSocket socket = new DatagramSocket(4445);
             byte[] buf = new byte[1024];
-            DatagramPacket packet = new DatagramPacket(buf, buf.length, InetAddress.getByName("10.0.0.255"), 4446);
+            DatagramPacket packet = new DatagramPacket(buf, buf.length, InetAddress.getByName(addressURL), 4446);
 
             String sendMsg = "[" + nick + "] " + msg;
             packet.setData((sendMsg).getBytes());

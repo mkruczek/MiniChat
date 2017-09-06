@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="layout.LanFragment">
+    tools:context="layout.OnlineFragment">
 
     <LinearLayout
         android:orientation="vertical"
@@ -12,23 +12,16 @@
 
 
         <EditText
-            android:id="@+id/nickEditTexLAN"
+            android:id="@+id/nickEditTexOnline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="set NICK"
             android:layout_marginBottom="35dp"
             android:inputType="textPersonName" />
 
-        <EditText
-            android:id="@+id/IPaddressEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="set IP address (192.168.1.255)"
-            android:layout_marginBottom="35dp"
-            android:inputType="textPersonName" />
 
         <ImageButton
-            android:id="@+id/loginButtonLAN"
+            android:id="@+id/loginButtonOnline"
             android:src="@android:drawable/ic_menu_send"
             android:layout_gravity="center"
             android:layout_width="wrap_content"

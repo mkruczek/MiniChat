@@ -11,26 +11,36 @@
 
 
     <RadioGroup
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal"
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/IRCButton"
-            android:onClick="IRConClick"
+            android:id="@+id/onlineButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
-            android:text="IRC" />
+            android:layout_margin="15dp"
+            android:onClick="OnlineonClick"
+            android:text="ONLINE" />
 
         <RadioButton
             android:id="@+id/LANButton"
-            android:onClick="LANonClick"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="15dp"
+            android:onClick="LANonClick"
             android:text="LAN" />
+
+        <RadioButton
+            android:id="@+id/IRCButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:onClick="IRConClick"
+            android:text="IRC" />
+
 
     </RadioGroup>
 

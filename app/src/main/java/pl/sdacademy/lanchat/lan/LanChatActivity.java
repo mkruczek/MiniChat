@@ -45,7 +45,7 @@ public class LanChatActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String msg = editTextMsg.getText().toString();
                 LanClientAsyncTask lanClientAsyncTask = new LanClientAsyncTask(LanChatActivity.this);
-                lanClientAsyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, msg, nick);
+                lanClientAsyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, msg, nick, address);
                 Log.d("kru", "jestem w onClick");
                 editTextMsg.setText("");
 
